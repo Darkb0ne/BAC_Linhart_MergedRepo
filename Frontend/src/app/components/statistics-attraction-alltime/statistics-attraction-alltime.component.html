@@ -1,0 +1,19 @@
+<div class="table-wrapper">
+    <h3>All Time Attraktionen Statistiken</h3>
+    <ng-container *ngIf="result != null">
+        <table mat-table [dataSource]="result">
+            <ng-container matColumnDef="attraction">
+                <th mat-header-cell *matHeaderCellDef> Attraktion </th>
+                <td mat-cell *matCellDef="let i"> {{i.name}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="viewCount">
+                <th mat-header-cell *matHeaderCellDef> View Count </th>
+                <td mat-cell *matCellDef="let i"> {{i.viewCount}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+        </table>
+    </ng-container>
+</div>

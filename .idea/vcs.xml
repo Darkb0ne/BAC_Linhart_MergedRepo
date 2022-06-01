@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-cloud-config-repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-cloud-config-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-comissionsMS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-eureka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog-statisticsMS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blogMS/backend" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <span class="title"><fa-icon class="logo" [icon]="faRobot"></fa-icon> {{title}}</span>
+  <span class="spacer"></span>
+  <a mat-flat-button color="primary" routerLink="/authors">Alle Autoren</a>
+  <a mat-flat-button color="primary" routerLink="/article">Artikel erstellen</a>
+  <a mat-flat-button color="primary" routerLink="/home">Home</a>
+  <a mat-flat-button color="primary" routerLink="/statistics">Statistiken</a>
+</mat-toolbar>
+<div class="outlet">
+  <router-outlet></router-outlet>
+</div>

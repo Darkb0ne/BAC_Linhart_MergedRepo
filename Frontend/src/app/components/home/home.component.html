@@ -1,0 +1,14 @@
+<h2>Ausgesuchte Artikel</h2>
+<ng-container *ngIf="result != null">
+    <div class="home-article-form-wrapper" *ngFor="let news of result">
+        <mat-card class="post-card">
+            <mat-card-subtitle>{{news.attraction?.name}}</mat-card-subtitle>
+            <mat-card-title>{{news.title}}</mat-card-title>
+            <mat-card-content>{{news.text}}</mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions></mat-card-actions>
+                <button mat-button>{{news.viewCount}}</button>
+                <button mat-button [routerLink]="['/news', news.id]">Details</button>
+        </mat-card>
+    </div>
+</ng-container>

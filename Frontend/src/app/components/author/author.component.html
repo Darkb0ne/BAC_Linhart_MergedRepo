@@ -1,0 +1,28 @@
+<h2>All Authors</h2>
+<mat-paginator #paginator
+  [length]="totalRows | async"
+  [pageIndex]="0"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+></mat-paginator>
+
+<mat-accordion displayMode="flat" multi class="mat-table">
+  <section matSort class="mat-elevation-z2 mat-header-row">
+    <span class="mat-header-cell" mat-sort-header="sex">Sex</span>
+    <span class="mat-header-cell" mat-sort-header="firstname">Firstname</span>
+    <span class="mat-header-cell" mat-sort-header="lastname">Lastname</span>
+    <span class="mat-header-cell" mat-sort-header="email">Email</span>
+    <span class="mat-header-cell" mat-sort-header="id">ID</span>
+  </section>
+
+  <mat-expansion-panel *ngFor="let author of author ">
+    <mat-expansion-panel-header class="mat-row">
+      <span class="mat-cell">{{author.sex}}</span>
+      <span class="mat-cell">{{author.firstName}}</span>
+      <span class="mat-cell">{{author.lastName}}</span>
+      <span class="mat-cell">{{author.email}}</span>
+      <span class="mat-cell">{{author.id}}</span>
+    </mat-expansion-panel-header>
+    <div><pre>{{author | json}}</pre></div>
+  </mat-expansion-panel>
+</mat-accordion>

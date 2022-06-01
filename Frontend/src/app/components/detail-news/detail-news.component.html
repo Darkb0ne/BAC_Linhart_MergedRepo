@@ -1,0 +1,24 @@
+<ng-container *ngIf="news$ | async as news">
+    <mat-card class="article-card">
+        <mat-card-subtitle>{{news.attraction.name}}</mat-card-subtitle>
+        <mat-card-title>{{news.title}}</mat-card-title>
+        <mat-card-content>
+            <div>{{news.text}}</div>
+            <div class="author-title">Autoren</div>
+            <ng-container *ngFor="let author of authors$ | async">
+                    <mat-card class="author-card">
+
+                        <mat-card-content class="author-card-content">
+                            <div>Vorname: {{author.firstName}}</div>
+                            <div>Nachname: {{author.lastName}}</div>
+                            <div>Email: {{author.email}}</div>
+                            <div>Geschlecht: {{author.sex}}</div>
+                        </mat-card-content>
+
+                    </mat-card>
+            </ng-container>
+            <div>Erstellt am : {{news.publicationDate}}</div>
+            <div>Wurde so oft gelesen : {{news.viewCount}}</div>
+        </mat-card-content>
+      </mat-card>
+</ng-container>

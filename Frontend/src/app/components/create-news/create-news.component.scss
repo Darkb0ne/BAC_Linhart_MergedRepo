@@ -1,0 +1,39 @@
+.article-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-form {
+    width: 60%;
+    display: grid;
+    grid-gap: 10px;
+    row-gap: 25px;
+    grid-template-columns: [col] auto [col] auto [col] auto [col] auto [col] auto [col] auto;
+    grid-template-rows: [row] auto [row] auto [row];
+}
+
+.article-author {
+    grid-column: col 3 / span 3;
+    grid-row: row 2;
+}
+
+.article-attraction {
+    grid-column: col 3 / span 3;
+    grid-row: row 3;
+}
+
+.article-title {
+    grid-column: col 3 / span 3;
+    grid-row: row 4;
+}
+
+.article-area {
+    grid-column: col 3 / span 3;
+    grid-row: row 5;
+}
+
+.create-article-button {
+    grid-column: col 3 / span 3;
+    grid-row: row 6;
+}

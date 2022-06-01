@@ -1,0 +1,28 @@
+<h2>Artikel erstellen</h2>
+<div class="article-form-wrapper">
+    <form [formGroup]="articleForm" class="article-form">
+        <mat-form-field class="article-author" appearance="fill" *ngIf="authors != null">
+            <mat-label>Autor</mat-label>
+            <mat-select multiple formControlName="author">
+                <mat-option *ngFor="let a of authors" [value]="a.id">
+                    {{a.firstName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="article-attraction" appearance="fill">
+            <mat-label>Attraktion Name (wird erstellt, falls er noch nicht existiert)</mat-label>
+            <input matInput formControlName="attraction">
+        </mat-form-field>
+        <mat-form-field class="article-title" appearance="fill">
+            <mat-label>Artikel Titel</mat-label>
+            <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field class="article-area" appearance="fill">
+            <mat-label>Artikel Text</mat-label>
+            <textarea matInput formControlName="text"></textarea>
+        </mat-form-field>
+
+        <button class="create-article-button" mat-flat-button color="primary" (click)="submitArticle()">Artikel abschicken </button>
+
+    </form>
+</div>
